@@ -9,7 +9,7 @@ while(1):
    
     g = int(input("Take a guess: "))    
     count = count + 1
-    print(c)
+    
  
     if c < g:
              print("Higher...")

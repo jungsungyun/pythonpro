@@ -1,42 +1,39 @@
 import random 
 
-hp = random.randrange(50,100)
-mp = random.randrange(50,100)
+hp = random.randrange(50,101)
+mp = random.randrange(50,101)
 
-ha = random.randrange(-10,20)
-ma = random.randrange(-10,20) 
+count = 0
+print("hero HP:",hp,", monster HP: ",mp)
 
+while hp > 0 and mp > 0:
+    ha = random.randrange(-10,21)
+    ma = random.randrange(-10,21) 
+
+    count = count + 1
+
+    if ha <= 0:
+        hs = "false"
+    else:
+        mp = mp - ha
+        hs = "sucees"
     
-    
-
-if ha >  0:
-    mp = mp - ha
-elif ma > 0:
-    hp = hp - ma
-
-
-
-while hp > 0 and mp >  0:
-
-    if ha >= 1:
-        hs = print("sucess")
-        
-        else
-            hs = print("false")
-    if ma >= 1:
-        ms = print("sucess")
-        else
-            ms = print("false")
+    if  ma <= 0:
+        ms = "false"
+    else:
+        hp = hp - ma
+        ms = "sucess"
 
 
 
-        print("hero(HP:", hp," attack:",ha,") ",hs,"<-> monster(Hp:"),mp," attack:",ma,") ",ms)
+    print("hero(HP:", hp," attack:",ha,") ",hs,"<-> monster(Hp:",mp," attack:",ma,") ",ms)
+    if hp <= 0 and mp <= 0:
+        break
+print("\n")
+print("-----------------------------------------------------------------------------------------\n")
 
-print("-----------------------------------------------------------------------------------------")
-
-print("Total phase: ",)
-if hp == 0:
+print("Total phase:",count)
+if hp <= 0:
     print("Monster win!!!!")
-else mp ==0:
+else:
     print("Hero win!!!")
-
